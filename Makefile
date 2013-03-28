@@ -20,8 +20,8 @@ obj/%.o: %.c $(HEADERS)
 $(TARGET): $(OBJECTS)
 	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
 
-a.outa: ass.py test.asm
-	./ass.py test.asm
+a.outa: ass.py tests/test.asm
+	./ass.py tests/test.asm
 
 clean:
 	-rm -f *.o

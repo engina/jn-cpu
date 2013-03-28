@@ -115,19 +115,16 @@ class Operand(object):
             self.val  = self.parseVal(o[1:])
             pass
         elif o.startswith("#"):
-            # immediate, strip the immediate operator #
+            # immediate
             self.val  = self.parseVal(o[1:])
             # calculate required bits to represent this value
             if self.val < 0:
                 # value bits -- strip "-0b"
                 b = len(bin(self.val)[3:])
-                # sign bit
-                b += 1
             else:
                 # strip "0b"
                 b = len(bin(self.val)[2:])
 
-            # check if we can fit this in a 32-bit representation
             if b > 32:
                 raise Exception('Target archtecture does not support values that cannot be represented in 32-bits')
             # IMM8, IMM16 and IMM32 is respectively 0, 1 and 2. So the following will do
@@ -164,7 +161,7 @@ class Operand(object):
             return int(v)
 
     def __str__(self):
-        return 'Operand mode: ' + self.mode + ' value: ' + str(self.val) + ' index: ' + str(self.base)
+        return 'Operand mode: ' + self.dir + ' value: ' + str(self.val) + ' index: ' + str(self.base)
 
 def parse_instruction(l):
     l = l.data.strip()

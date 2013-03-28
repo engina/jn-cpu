@@ -101,17 +101,17 @@ Addressing Mode Encoding
      0  0  1  0   IMM32
      0  0  1  1   DIR32
      0  1  0  0   IND32
-     0  1  0  1   IDX8_A
-     0  1  1  0   IDX8_X
-     0  1  1  1   IDX8_Y
-     1  0  0  0   IDX8_SP
-     1  0  0  1   IDX8_PC
-     1  0  1  0   IDX16_A
-     1  0  1  1   IDX16_X
-     1  1  0  0   IDX16_Y
-     1  1  0  1   IDX16_SP
-     1  1  1  0   IDX16_PC
-     1  1  1  1   RESERVED
+     0  1  0  1   RESERVED
+     0  1  1  0   RESERVED
+     0  1  1  1   RESERVED
+     1  0  0  0   IDX8_X
+     1  0  0  1   IDX8_Y
+     1  0  1  0   IDX8_SP
+     1  0  1  1   IDX8_PC
+     1  1  0  0   IDX16_X
+     1  1  0  1   IDX16_Y
+     1  1  1  0   IDX16_SP
+     1  1  1  1   IDX16_PC
     
 Operands
 ========
