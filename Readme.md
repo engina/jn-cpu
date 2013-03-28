@@ -1,6 +1,6 @@
 What is this ?
 ==============
-This is a stack of education tools that does cycle accurate simulation of a virtual 32-bit CPU, named JN, to demonstrate how aliasing, pipeline bubbles (fetch/decode stall) and branch flushes affect performance. CPU is based on Harvard Architecture and separates program and data memory busses, each has 32-bit width.
+This is a stack of educational tools that does cycle accurate simulation of a virtual 32-bit CPU, named JN, to demonstrate how aliasing, pipeline bubbles (fetch/decode stall) and branch flushes affect performance. CPU is based on Harvard Architecture and separates program and data memory busses, each has 32-bit width.
 
 Add first only timer timer peripheral will be implemented but eventually, some DMA controllers, MMU and peripherals will be added.
 
