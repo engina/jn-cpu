@@ -9,6 +9,7 @@ main
     mov     X, *FOO
     mov     X,#FOO ; inline comments
     mov     X, FOO + SP
+    mov     X, FOO + SP + 5
     mov     X, INC_DEF
     cmp     X, 0x5000
     call    foo

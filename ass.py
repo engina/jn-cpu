@@ -130,10 +130,13 @@ def parse_instruction(l):
 
 def asm(lines):
     for l in  lines:
-        if not l.data[0].isspace():
-            parse_symbol(l)
-        else:
-            parse_instruction(l)
+        try:
+            if not l.data[0].isspace():
+                parse_symbol(l)
+            else:
+                parse_instruction(l)
+        except Exception, e:
+            err(l.file + ':' + str(l.line) + ' ' + str(e))
 
 def ass(f):
     out = preprocess(f)
