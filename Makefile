@@ -5,7 +5,7 @@ CFLAGS = -g -Wall -std=c99
 
 .PHONY: default all clean
 
-default: $(TARGET) a.outa
+default: $(TARGET) a.out
 
 all: default
 
@@ -20,8 +20,8 @@ obj/%.o: %.c $(HEADERS)
 $(TARGET): $(OBJECTS)
 	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
 
-a.outa: ass.py tests/test.asm
-	./ass.py tests/test.asm
+a.out: ./ass/ass.py ass/tests/test.asm
+	./ass/ass.py ass/tests/test.asm
 
 clean:
 	-rm -f *.o

@@ -161,7 +161,7 @@ class Operand(object):
             return int(v)
 
     def __str__(self):
-        return 'Operand mode: ' + self.dir + ' value: ' + str(self.val) + ' index: ' + str(self.base)
+        return 'Operand mode: ' + str(self.mode) + ' value: ' + str(self.val) + ' index: ' + str(self.base)
 
 def parse_instruction(l):
     l = l.data.strip()
@@ -186,7 +186,7 @@ def asm(lines):
             else:
                 parse_instruction(l)
         except Exception, e:
-            err(l.file.name + ':' + str(l.line) + ' ' + str(e))
+            err(l.file.name + ':' + str(l.lineno) + ' ' + str(e))
 
 def ass(f):
     out = preprocess(f)

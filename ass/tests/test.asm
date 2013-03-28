@@ -1,5 +1,5 @@
 #define FOO 0x5000
-#include "../jn/some.inc"
+#include "../tests/some.inc"
 #bar
 ; some comments
 main
